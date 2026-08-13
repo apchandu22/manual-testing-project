@@ -14,7 +14,7 @@
 
 ---
 
-# 2. Project Overview
+## 2. Project Overview
 
 The E-Commerce Web Application allows users to register, log in, browse products, search for products, filter and sort products, view product details, manage shopping cart items, complete checkout, place orders, and view order history.
 
@@ -24,7 +24,7 @@ The testing process will focus on identifying functional defects, validating bus
 
 ---
 
-# 3. Test Objectives
+## 3. Test Objectives
 
 The main objectives of testing are:
 
@@ -61,7 +61,7 @@ The main objectives of testing are:
 
 ---
 
-# 4. Test Scope
+## 4. Test Scope
 
 ## 4.1 In Scope
 
@@ -293,7 +293,7 @@ Initial browser coverage:
 
 ---
 
-### 4.2 Out of Scope
+## 4.2 Out of Scope
 
 The following activities are outside the scope of this project:
 
@@ -322,7 +322,7 @@ Basic security-related functional checks are included, such as:
 
 ---
 
-# 5. Testing Strategy
+## 5. Testing Strategy
 
 The testing strategy will follow a structured manual testing approach.
 
@@ -356,6 +356,7 @@ Defect Retesting
 Regression Testing
         ↓
 Test Closure
+```
 
 ---
 ## 6. Test Environment
@@ -393,9 +394,9 @@ The test environment should:
 - Allow application data to be reset where required.
 
 ---
-# 7. Testing Types
+## 7. Testing Types
 
-## 7.1 Functional Testing
+### 7.1 Functional Testing
 
 Functional testing will verify that the application functionality works according to the documented requirements.
 
@@ -418,7 +419,7 @@ The objective is to verify that each feature produces the expected result for va
 
 ---
 
-## 7.2 Smoke Testing
+### 7.2 Smoke Testing
 
 Smoke testing will be performed on every new application build to verify that the build is stable enough for detailed testing.
 
@@ -467,7 +468,7 @@ Place Order
         v
 Verify Order Confirmation
 ```
-### 7.3. Regression Testing
+### 7.3 Regression Testing
 
 Regression testing will be performed after application changes, enhancements, or defect fixes.
 
@@ -475,7 +476,7 @@ The objective is to verify that existing functionality has not been negatively i
 
 Regression testing will cover both the changed functionality and related business-critical areas.
 
-## 7.4. Sanity Testing
+### 7.4 Sanity Testing
 
 Sanity testing will be performed after minor changes, enhancements, or defect fixes to verify that the specific functionality is working as expected.
 
@@ -511,40 +512,7 @@ Pass / Fail
 
 Sanity testing is narrower than regression testing and focuses primarily on the impacted functionality.
 
-## 7.5 Integration Testing
-
-Integration testing will verify that different modules of the E-Commerce Web Application work correctly when integrated with each other.
-
-The objective of integration testing is to validate:
-
-- Data flow between modules
-- Communication between application components
-- Navigation between related pages
-- Data consistency across modules
-- Error handling during module interaction
-- Complete business workflows
-
-The following integrations will be validated.
-
-### Login to Product Listing
-
-```text
-Login
-   |
-   v
-Authentication
-   |
-   v
-Product Listing
-
-Verification:
-
-User authentication is successful.
-Authorized users are redirected to the correct page.
-Session is created successfully.
-User-specific data is loaded correctly.
-
-## 7.5 Integration Testing
+### 7.5 Integration Testing
 
 Integration testing will verify that different modules of the E-Commerce Web Application work correctly when integrated with each other.
 
@@ -747,5 +715,3 @@ Integration testing will focus on:
 The objective is to ensure that individual modules work together correctly as part of the complete application workflow.
 
 ---
-
-## 7.6 System Testing
