@@ -440,7 +440,6 @@ Regression testing will be performed after application changes, enhancements, or
 The objective is to verify that existing functionality has not been negatively impacted by recent changes.
 
 Regression testing will cover both the changed functionality and related business-critical areas.
----
 
 ## 7.4 Sanity Testing
 
