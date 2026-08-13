@@ -359,7 +359,7 @@ Test Closure
 
 ---
 
-## 7. Testing Types
+# 7. Testing Types
 
 ## 7.1 Functional Testing
 
@@ -392,7 +392,7 @@ Critical smoke scenarios include:
 
 1. Launch the application.
 2. Verify the application loads successfully.
-3. Login with valid credentials.
+3. Log in with valid credentials.
 4. Verify the home/product page.
 5. Browse products.
 6. Open a product.
@@ -432,16 +432,17 @@ Place Order
         |
         v
 Verify Order Confirmation
-
-##7.3 Regression Testing
+```
+## 7.3 Regression Testing
 
 Regression testing will be performed after application changes, enhancements, or defect fixes.
 
 The objective is to verify that existing functionality has not been negatively impacted by recent changes.
 
 Regression testing will cover both the changed functionality and related business-critical areas.
+---
 
-##7.4 Sanity Testing
+## 7.4 Sanity Testing
 
 Sanity testing will be performed after minor changes, enhancements, or defect fixes to verify that the specific functionality is working as expected.
 
@@ -510,3 +511,208 @@ Authorized users are redirected to the correct page.
 Session is created successfully.
 User-specific data is loaded correctly.
 
+## 7.5 Integration Testing
+
+Integration testing will verify that different modules of the E-Commerce Web Application work correctly when integrated with each other.
+
+The objective of integration testing is to validate:
+
+- Data flow between modules
+- Communication between application components
+- Navigation between related pages
+- Data consistency across modules
+- Error handling during module interaction
+- Complete business workflows
+
+The following integrations will be validated.
+
+### Login to Product Listing
+
+```text
+Login
+   |
+   v
+Authentication
+   |
+   v
+Product Listing
+```
+
+Verification:
+
+- User authentication is successful.
+- Authorized users are redirected to the correct page.
+- User session is created successfully.
+- User-specific data is loaded correctly.
+
+---
+
+### Product Listing to Product Details
+
+```text
+Product Listing
+       |
+       v
+Select Product
+       |
+       v
+Product Details
+```
+
+Verification:
+
+- Selected product opens successfully.
+- Product name is correct.
+- Product image is correct.
+- Product price is correct.
+- Product description is correct.
+- Product availability is displayed correctly.
+
+---
+
+### Product Details to Shopping Cart
+
+```text
+Product Details
+       |
+       v
+Add to Cart
+       |
+       v
+Shopping Cart
+```
+
+Verification:
+
+- Selected product is added successfully.
+- Product name is displayed correctly.
+- Product price is transferred correctly.
+- Selected quantity is maintained.
+- Product subtotal is calculated correctly.
+
+---
+
+### Shopping Cart to Checkout
+
+```text
+Shopping Cart
+       |
+       v
+Proceed to Checkout
+       |
+       v
+Checkout
+```
+
+Verification:
+
+- Cart items are displayed correctly.
+- Product quantities are maintained.
+- Product prices are accurate.
+- Subtotal is calculated correctly.
+- Applicable tax is calculated correctly.
+- Final total is calculated correctly.
+- Cart information is correctly transferred to checkout.
+
+---
+
+### Checkout to Order Placement
+
+```text
+Checkout
+    |
+    v
+Customer Information
+    |
+    v
+Delivery Address
+    |
+    v
+Payment Method
+    |
+    v
+Order Review
+    |
+    v
+Place Order
+```
+
+Verification:
+
+- Customer information is accepted correctly.
+- Delivery address is validated correctly.
+- Selected payment method is retained.
+- Order summary displays correct information.
+- Product quantities are correct.
+- Product prices are correct.
+- Final order amount is correct.
+- Order can be placed successfully when all required information is valid.
+
+---
+
+### Order Placement to Order Confirmation
+
+```text
+Place Order
+     |
+     v
+Order Processing
+     |
+     v
+Order Confirmation
+```
+
+Verification:
+
+- Order is created successfully.
+- Order confirmation is displayed.
+- Order reference/order ID is generated where applicable.
+- Order amount is displayed correctly.
+- Order details are accurate.
+
+---
+
+### Order Placement to Order History
+
+```text
+Place Order
+     |
+     v
+Order Confirmation
+     |
+     v
+Order History
+     |
+     v
+Order Details
+```
+
+Verification:
+
+- Newly placed order appears in order history.
+- Order information is accurate.
+- Order amount matches the placed order.
+- Order status is displayed correctly.
+- Order details can be opened successfully.
+
+---
+
+### Integration Testing Focus Areas
+
+Integration testing will focus on:
+
+- Module-to-module interaction
+- Data transfer accuracy
+- Data consistency
+- Navigation flow
+- Session management
+- Business workflow continuity
+- Error handling
+- Validation across integrated modules
+- Correct calculation and transfer of order information
+
+The objective is to ensure that individual modules work together correctly as part of the complete application workflow.
+
+---
+
+## 7.6 System Testing
