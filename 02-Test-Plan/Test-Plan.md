@@ -10,106 +10,286 @@
 | Status | Baseline |
 | Testing Type | Manual Testing |
 | Prepared By | A P CHANDAN |
+| Document Purpose | Define the overall testing strategy and approach for the E-Commerce Web Application |
 
 ---
 
-# 2. Objective
+# 2. Project Overview
 
-The objective of this test plan is to define the testing approach, scope, resources, test environment, test types, entry criteria, exit criteria, risks, and deliverables for validating the E-Commerce Web Application.
+The E-Commerce Web Application allows users to register, log in, browse products, search for products, filter and sort products, view product details, manage shopping cart items, complete checkout, place orders, and view order history.
 
-The primary goal is to verify that the application meets the defined functional requirements and provides a reliable and user-friendly shopping experience.
+This Test Plan defines the approach that will be followed to validate the application's functional behavior, usability, compatibility, data accuracy, and major business workflows through manual testing.
+
+The testing process will focus on identifying functional defects, validating business requirements, verifying negative scenarios, and ensuring that changes do not adversely affect existing functionality.
 
 ---
 
 # 3. Test Objectives
 
-The following objectives will be achieved through testing:
+The main objectives of testing are:
 
-- Verify that users can successfully register and log in.
-- Verify product listing functionality.
-- Verify product search functionality.
-- Verify product filtering functionality.
-- Verify product sorting functionality.
-- Verify product details functionality.
-- Verify shopping cart functionality.
-- Verify checkout functionality.
-- Verify order placement functionality.
-- Verify order history functionality.
-- Verify navigation between application modules.
-- Validate mandatory field and input validations.
-- Verify appropriate error and validation messages.
-- Verify basic authentication and authorization behavior.
-- Verify supported browser compatibility.
-- Identify, document, and track defects.
-- Perform retesting of fixed defects.
-- Perform regression testing to ensure existing functionality is not impacted by changes.
+1. Verify that the application meets the documented requirements.
+2. Verify that users can register successfully.
+3. Verify that registered users can log in and log out.
+4. Verify authentication and protected-page behavior.
+5. Verify product listing functionality.
+6. Verify product search functionality.
+7. Verify product filtering functionality.
+8. Verify product sorting functionality.
+9. Verify product details functionality.
+10. Verify product availability behavior.
+11. Verify add-to-cart functionality.
+12. Verify cart quantity management.
+13. Verify cart removal functionality.
+14. Verify cart price calculations.
+15. Verify checkout functionality.
+16. Verify delivery address validation.
+17. Verify payment method selection.
+18. Verify order review functionality.
+19. Verify order placement.
+20. Verify order confirmation.
+21. Verify order history.
+22. Verify order status information.
+23. Verify navigation between application modules.
+24. Verify validation and error messages.
+25. Verify basic UI and usability behavior.
+26. Verify supported browser compatibility.
+27. Identify and document defects.
+28. Retest defects after fixes.
+29. Perform regression testing after application changes.
+30. Maintain traceability between requirements and test cases.
 
 ---
 
-# 4. Scope
+# 4. Test Scope
 
 ## 4.1 In Scope
 
-The following modules are included in the testing scope:
+The following application areas are included in the testing scope.
 
-### User Management
-- User Registration
-- User Login
-- User Logout
-- Authentication validation
+### 4.1.1 User Registration
+
+Testing will cover:
+
+- Registration page access
+- First Name validation
+- Last Name validation
+- Email validation
+- Password validation
+- Confirm Password validation
 - Mandatory field validation
-- Input validation
+- Invalid input handling
+- Duplicate email handling
+- Successful registration
+- Registration confirmation
 
-### Product Management
-- Product Listing
-- Product Search
-- Product Filtering
-- Product Sorting
-- Product Details
-- Product Availability
+---
 
-### Shopping Cart
-- Add Product
-- Remove Product
-- Update Quantity
-- Multiple Products
-- Subtotal Calculation
-- Tax Calculation
-- Final Total
-- Empty Cart
+### 4.1.2 User Login
 
-### Checkout
-- Checkout Navigation
-- Customer Information
-- Delivery Address
-- Address Validation
-- Payment Method Selection
-- Order Summary
-- Order Review
-- Checkout Validation
+Testing will cover:
 
-### Order Management
-- Order Placement
-- Order Confirmation
-- Order Reference
-- Order Details
-- Order History
-- Order Status
+- Login page access
+- Valid credentials
+- Invalid credentials
+- Blank email
+- Blank password
+- Invalid email format
+- Password masking
+- Login error messages
+- Successful login
+- Logout
+- Protected-page access
+- Session behavior
 
-### UI and Navigation
-- Application Navigation
-- Header Navigation
-- Cart Navigation
-- Account Navigation
-- Validation Messages
-- Button Behavior
-- Field Labels
-- Basic Usability
+---
 
-### Compatibility
+### 4.1.3 Product Listing
+
+Testing will cover:
+
+- Product listing page
+- Product names
+- Product images
+- Product prices
+- Product descriptions
+- Product availability
+- Product navigation
+- Product count
+- Product display consistency
+
+---
+
+### 4.1.4 Product Search
+
+Testing will cover:
+
+- Search using valid keywords
+- Search using partial keywords
+- Search using invalid keywords
+- Search with no matching products
+- Empty search
+- Search case handling
+- Search result accuracy
+- Clearing search criteria
+
+---
+
+### 4.1.5 Product Filtering
+
+Testing will cover:
+
+- Category filtering
+- Price filtering
+- Multiple filters
+- Filter result accuracy
+- Applying filters
+- Removing filters
+- Clear filters
+- Filter persistence where applicable
+
+---
+
+### 4.1.6 Product Sorting
+
+Testing will cover:
+
+- Price low to high
+- Price high to low
+- Alphabetical sorting
+- Sorting accuracy
+- Sorting after search
+- Sorting after filtering
+- Resetting sorting where applicable
+
+---
+
+### 4.1.7 Product Details
+
+Testing will cover:
+
+- Product details page
+- Product name
+- Product image
+- Product price
+- Product description
+- Product availability
+- Product quantity
+- Add to Cart
+- Unavailable product behavior
+
+---
+
+### 4.1.8 Shopping Cart
+
+Testing will cover:
+
+- Add product
+- Add multiple products
+- View cart
+- Increase quantity
+- Decrease quantity
+- Remove product
+- Empty cart
+- Product subtotal
+- Tax calculation
+- Final total
+- Invalid quantity
+- Cart persistence according to application behavior
+
+---
+
+### 4.1.9 Checkout
+
+Testing will cover:
+
+- Checkout navigation
+- Customer information
+- Delivery address
+- Mandatory address fields
+- PIN/ZIP validation
+- Payment method
+- Payment information validation
+- Order summary
+- Order total
+- Address modification
+- Order review
+- Empty cart checkout
+- Duplicate order submission
+- Successful checkout
+
+---
+
+### 4.1.10 Order Placement
+
+Testing will cover:
+
+- Place Order
+- Successful order placement
+- Order confirmation
+- Order reference
+- Order details
+- Order amount
+- Order date
+- Order status
+
+---
+
+### 4.1.11 Order History
+
+Testing will cover:
+
+- Order history access
+- Previous orders
+- Multiple orders
+- Order details
+- Order status
+- Empty order history
+- Order sorting where applicable
+- Unauthorized access
+
+---
+
+### 4.1.12 Navigation
+
+Testing will cover:
+
+- Header navigation
+- Product navigation
+- Cart navigation
+- Account navigation
+- Checkout navigation
+- Browser back navigation
+- Application navigation
+- Logout navigation
+
+---
+
+### 4.1.13 UI and Usability
+
+Testing will cover:
+
+- Consistent layout
+- Correct field labels
+- Correct button labels
+- Button behavior
+- Error message visibility
+- Validation message clarity
+- Image display
+- Page alignment
+- Basic usability
+- Navigation consistency
+
+---
+
+### 4.1.14 Compatibility
+
+Testing will cover supported desktop browsers.
+
+Initial browser coverage:
+
 - Google Chrome
 - Microsoft Edge
-- Supported screen sizes where applicable
 
 ---
 
@@ -117,614 +297,43 @@ The following modules are included in the testing scope:
 
 The following activities are outside the scope of this project:
 
-- Performance Testing
-- Load Testing
-- Stress Testing
-- Security Penetration Testing
-- Vulnerability Assessment and Penetration Testing (VAPT)
-- API Automation
-- Mobile Application Testing
-- Database Performance Testing
-- Infrastructure Testing
-- Production Monitoring
-- Third-Party Service Certification
-- Payment Gateway Certification
+- Performance testing
+- Load testing
+- Stress testing
+- Volume testing
+- Security penetration testing
+- VAPT
+- API automation
+- Mobile application testing
+- Database performance testing
+- Infrastructure testing
+- Production monitoring
+- Payment gateway certification
+- Third-party service certification
+- Accessibility certification
+- Infrastructure security testing
 
-Basic security-related functional checks such as authentication, logout behavior, and user data isolation are included.
+Basic security-related functional checks are included, such as:
 
----
-
-# 6. Testing Types
-
-The following testing types will be performed.
-
-## 6.1 Functional Testing
-
-Verify that each application feature works according to the defined requirements.
-
-Examples:
-
-- Registration
-- Login
-- Search
-- Cart
-- Checkout
-- Order Placement
+- Login authentication
+- Logout behavior
+- Protected page access
+- Basic user data isolation
 
 ---
 
-## 6.2 Smoke Testing
+# 6. Testing Strategy
 
-Smoke testing will be performed on a new build to verify that the critical application functionality is stable enough for detailed testing.
+The testing strategy will follow a structured manual testing approach.
 
-Critical smoke flow:
+The overall process will be:
 
 ```text
-Launch Application
-        ↓
-Login
-        ↓
-Browse Products
-        ↓
-View Product
-        ↓
-Add to Cart
-        ↓
-Checkout
-        ↓
-Place Order
-
-## 6.3 Sanity Testing
-
-Sanity testing will be performed after specific changes or bug fixes to verify that the affected functionality works correctly.
-
----
-
-## 6.4 Regression Testing
-
-Regression testing will be performed after application changes or defect fixes to ensure that existing functionality has not been negatively affected.
-
-Regression areas include:
-
-- Login
-- Product Search
-- Product Details
-- Cart
-- Checkout
-- Order Placement
-- Order History
-
----
-
-## 6.5 Retesting
-
-Retesting will be performed after defects are fixed to verify that the reported defects have been successfully resolved.
-
----
-
-## 6.6 Integration Testing
-
-Integration testing will validate interactions between major application modules.
-
-Examples:
-
-```text
-Login → Product Listing
-Product → Cart
-Cart → Checkout
-Checkout → Order
-Order → Order History
-
-6.7 UI and Usability Testing
-
-The application UI will be checked for:
-
-Consistent layout
-Correct labels
-Readable messages
-Proper button behavior
-Appropriate field validation
-Correct image display
-Navigation consistency
-User-friendly error messages
-6.8 Compatibility Testing
-
-The application will be tested on supported browsers to identify browser-specific issues.
-
-Initial browser coverage:
-
-Browser	Coverage
-Google Chrome	Primary
-Microsoft Edge	Secondary
-6.9 Negative Testing
-
-Negative testing will verify how the application behaves with invalid, unexpected, or incomplete inputs.
-
-Examples:
-
-Invalid email
-Invalid password
-Blank mandatory fields
-Incorrect password confirmation
-Invalid search keyword
-Invalid quantity
-Missing address
-Invalid PIN/ZIP code
-Invalid payment information
-7. Test Approach
-
-Testing will follow a structured manual testing approach.
-
-Requirement Analysis
-        ↓
-Test Scenario Identification
-        ↓
-Test Case Design
-        ↓
-Test Data Preparation
-        ↓
-Test Case Review
-        ↓
-Test Execution
-        ↓
-Defect Reporting
-        ↓
-Defect Retesting
-        ↓
-Regression Testing
-        ↓
-Test Closure
-
-Testing will be performed using risk-based prioritization, with critical business flows receiving higher execution priority.
-
-8. Test Design Techniques
-
-The following test design techniques will be used.
-
-8.1 Equivalence Partitioning
-
-Input data will be divided into valid and invalid groups.
-
-Example:
-
-Valid:
-user@example.com
-
-Invalid:
-userexample.com
-user@
-@example.com
-8.2 Boundary Value Analysis
-
-Boundary values will be tested for fields that have defined limits.
-
-Example, if a field accepts 1–50 characters:
-
-0 characters
-1 character
-2 characters
-49 characters
-50 characters
-51 characters
-8.3 Decision Table Testing
-
-Decision tables will be used where multiple conditions affect the expected result.
-
-Example:
-
-Valid Email + Valid Password
-        ↓
-Login Successful
-
-Valid Email + Invalid Password
-        ↓
-Login Failed
-
-Invalid Email + Valid Password
-        ↓
-Login Failed
-
-Invalid Email + Invalid Password
-        ↓
-Login Failed
-8.4 State Transition Testing
-
-State transitions will be validated for workflows such as order processing.
-
-Example:
-
-Order Placed
-     ↓
-Order Confirmed
-     ↓
-Order Processing
-     ↓
-Order Shipped
-     ↓
-Order Delivered
-
-Where the application supports these statuses.
-
-8.5 Error Guessing
-
-Experience-based testing will be used to identify common failure conditions.
-
-Examples:
-
-Double-clicking Place Order
-Refreshing checkout
-Removing all cart items
-Using invalid quantities
-Navigating back after logout
-Using expired sessions
-Submitting forms multiple times
-9. Test Scenarios
-
-Major test scenarios will cover the following areas.
-
-Registration
-Verify successful registration.
-Verify mandatory field validation.
-Verify email format validation.
-Verify duplicate email handling.
-Verify password validation.
-Verify password confirmation.
-Login
-Verify successful login.
-Verify invalid credentials.
-Verify blank fields.
-Verify password masking.
-Verify logout.
-Verify protected page access.
-Product
-Verify product listing.
-Verify product search.
-Verify no-result search.
-Verify product filtering.
-Verify product sorting.
-Verify product details.
-Verify product availability.
-Cart
-Verify adding products.
-Verify removing products.
-Verify quantity updates.
-Verify multiple products.
-Verify subtotal calculation.
-Verify tax calculation.
-Verify final total.
-Verify empty cart.
-Checkout
-Verify checkout navigation.
-Verify address validation.
-Verify payment method selection.
-Verify order summary.
-Verify total amount.
-Verify order review.
-Verify successful checkout.
-Verify duplicate submission prevention.
-Orders
-Verify order placement.
-Verify order confirmation.
-Verify order reference.
-Verify order details.
-Verify order history.
-Verify order status.
-Verify unauthorized order access.
-10. Test Environment
-
-Testing will be performed in a controlled test environment.
-
-Hardware
-Item	Configuration
-Device	Desktop/Laptop
-Operating System	Windows
-Screen	Standard desktop resolution
-Software
-Component	Details
-Browser 1	Google Chrome
-Browser 2	Microsoft Edge
-Testing Type	Manual
-Defect Tracking	JIRA / GitHub Issues
-Documentation	Markdown
-11. Test Data
-
-Test data will be prepared for all major functional areas.
-
-User Data
-Valid User
-Invalid User
-Duplicate User
-New User
-Login Data
-Valid Email + Valid Password
-Valid Email + Invalid Password
-Invalid Email + Valid Password
-Invalid Email + Invalid Password
-Blank Email
-Blank Password
-Product Data
-Valid Product
-Unavailable Product
-Multiple Products
-Products with Different Prices
-Cart Data
-Single Product
-Multiple Products
-Quantity = 1
-Quantity > 1
-Invalid Quantity
-Empty Cart
-Checkout Data
-Valid Address
-Invalid Address
-Blank Mandatory Fields
-Valid PIN/ZIP
-Invalid PIN/ZIP
-Valid Payment Information
-Invalid Payment Information
-12. Test Case Priorities
-
-Test cases will be prioritized as follows:
-
-Priority	Description
-P0	Critical business flow; execution is mandatory
-P1	High business impact
-P2	Medium business impact
-P3	Low business impact
-
-Critical P0 areas include:
-
-Login
-Product Selection
-Add to Cart
-Checkout
-Order Placement
-13. Defect Management
-
-Defects identified during testing will be documented with sufficient information for investigation and resolution.
-
-Each defect should contain:
-
-Defect ID
-Summary
-Description
-Environment
-Preconditions
-Steps to Reproduce
-Test Data
-Expected Result
-Actual Result
-Severity
-Priority
-Evidence
-Status
-Assigned To
-Reported By
-14. Defect Severity
-Severity	Description
-Critical	Application or critical business flow is unusable
-High	Major functionality is not working
-Medium	Functionality is partially affected
-Low	Minor functional or UI issue
-15. Defect Priority
-Priority	Description
-P0	Immediate resolution required
-P1	High priority fix
-P2	Normal priority
-P3	Low priority
-16. Defect Life Cycle
-
-The expected defect life cycle is:
-
-New
- ↓
-Assigned
- ↓
-Open
- ↓
-Fixed
- ↓
-Retest
- ↓
-Verified
- ↓
-Closed
-
-Possible alternate states:
-
-Rejected
-Duplicate
-Deferred
-Reopened
-Not a Bug
-17. Entry Criteria
-
-Testing can begin when:
-
-Requirements are available and reviewed.
-Test environment is available.
-Application build is deployed.
-Major application modules are accessible.
-Test data is available.
-Test scenarios are prepared.
-Test cases are reviewed.
-Required testing tools are available.
-18. Exit Criteria
-
-Testing can be considered complete when:
-
-Planned test cases have been executed.
-Critical test cases have passed.
-Critical and high-severity defects are resolved or formally accepted.
-Failed test cases have been analyzed.
-Retesting is completed for fixed defects.
-Regression testing is completed.
-Test execution results are documented.
-Test summary report is prepared.
-RTM is updated.
-19. Suspension Criteria
-
-Testing may be temporarily suspended when:
-
-Application is unavailable.
-Critical functionality is completely blocked.
-Test environment is unavailable.
-Major build instability prevents meaningful execution.
-Required test data is unavailable.
-A critical defect blocks the majority of test cases.
-20. Resumption Criteria
-
-Testing will resume when:
-
-A stable application build is available.
-Blocking defects are fixed or an approved workaround is provided.
-Test environment is restored.
-Required test data is available.
-Affected test cases can be executed successfully.
-21. Deliverables
-
-The following testing deliverables will be maintained:
-
-Requirements Document
-        ↓
-Test Plan
-        ↓
-Test Scenarios
-        ↓
-Test Cases
-        ↓
-Test Data
-        ↓
-Requirement Traceability Matrix
-        ↓
-Defect Reports
-        ↓
-Test Execution Report
-        ↓
-Test Summary Report
-22. Roles and Responsibilities
-Role	Responsibility
-QA/Test Engineer	Requirement analysis, test design, execution, defect reporting, retesting and regression
-Developer	Defect investigation and resolution
-Business/Stakeholder	Requirement clarification and acceptance
-QA Lead	Test planning, review and test status tracking
-
-For this portfolio project, the testing activities are demonstrated from the perspective of a Manual Test Engineer.
-
-23. Risks
-Risk	Impact	Mitigation
-Unstable application build	High	Perform smoke testing before detailed execution
-Environment unavailable	High	Maintain a stable test environment
-Requirement changes	Medium	Review and update test cases
-Insufficient test data	Medium	Prepare test data before execution
-Critical defect	High	Prioritize critical defects
-Browser-specific issue	Medium	Perform cross-browser testing
-Third-party dependency failure	Medium	Document dependency-related failures separately
-24. Assumptions
-
-The following assumptions are made:
-
-The application is available for testing.
-Requirements are sufficiently defined.
-Test users can be created.
-Product data is available.
-Checkout functionality is available in the test environment.
-Test environment is representative of supported application behavior.
-Required browser versions are available.
-Defects can be reported and tracked.
-Test data can be created or reset when required.
-25. Traceability Approach
-
-Each requirement will be mapped to one or more test cases using the Requirement Traceability Matrix.
-
-Example:
-
-REQ-LOGIN-001
-      ↓
-TS-LOGIN-001
-      ↓
-TC-LOGIN-001
-      ↓
-Execution Result
-      ↓
-Defect ID (if applicable)
-
-The RTM will be created after test scenarios and test cases are finalized.
-
-26. Test Execution Approach
-
-Each test case will be executed using the following process:
-
-Read Preconditions
-       ↓
-Prepare Test Data
-       ↓
-Execute Test Steps
-       ↓
-Compare Actual vs Expected Result
-       ↓
-Record Status
-       ↓
-Report Defect if Failed
-       ↓
-Retest after Fix
-       ↓
-Update Final Status
-
-Test case statuses:
-
-Not Executed
-Pass
-Fail
-Blocked
-Not Applicable
-27. Metrics
-
-The following metrics will be tracked during test execution.
-
-Test Case Metrics
-Total Test Cases
-Executed Test Cases
-Passed Test Cases
-Failed Test Cases
-Blocked Test Cases
-Not Applicable Test Cases
-Defect Metrics
-Total Defects
-Critical Defects
-High Defects
-Medium Defects
-Low Defects
-Open Defects
-Closed Defects
-Reopened Defects
-Coverage Metrics
-Requirement Coverage
-Test Case Coverage
-Functional Coverage
-Regression Coverage
-28. Test Closure
-
-Test closure activities will include:
-
-Completing planned test execution.
-Verifying critical defects are resolved or accepted.
-Completing regression testing.
-Updating RTM.
-Preparing test execution metrics.
-Preparing the test summary report.
-Documenting known issues.
-Recording lessons learned.
-Archiving final testing documentation.
-29. Final Testing Flow
-
-The complete testing process for this project is:
-
 Requirement Analysis
         ↓
 Test Planning
         ↓
-Test Scenario Design
+Test Scenario Identification
         ↓
 Test Case Design
         ↓
@@ -740,13 +349,125 @@ Integration Testing
         ↓
 Negative Testing
         ↓
-Regression Testing
-        ↓
 Defect Reporting
         ↓
 Defect Retesting
         ↓
-Regression Verification
+Regression Testing
         ↓
 Test Closure
+
+---
+
+## 7. Testing Types
+
+### 7.1 Functional Testing
+
+Functional testing will verify that the application functionality works according to the documented requirements.
+
+Functional testing will cover:
+
+- User Registration
+- User Login
+- Product Listing
+- Product Search
+- Product Filtering
+- Product Sorting
+- Product Details
+- Shopping Cart
+- Checkout
+- Order Placement
+- Order History
+- Logout
+
+The objective is to verify that each feature produces the expected result for valid and invalid inputs.
+
+---
+
+### 7.2 Smoke Testing
+
+Smoke testing will be performed on every new application build to verify that the build is stable enough for detailed testing.
+
+Critical smoke scenarios include:
+
+1. Launch the application.
+2. Verify the application loads successfully.
+3. Login with valid credentials.
+4. Verify the home/product page.
+5. Browse products.
+6. Open a product.
+7. Add the product to the cart.
+8. Open the shopping cart.
+9. Verify cart details.
+10. Proceed to checkout.
+11. Verify the checkout page.
+12. Place an order where test payment functionality is available.
+13. Verify order confirmation.
+
+Critical Smoke Flow:
+
+```text
+Launch Application
+        |
+        v
+Login
+        |
+        v
+Browse Products
+        |
+        v
+View Product
+        |
+        v
+Add Product to Cart
+        |
+        v
+Open Cart
+        |
+        v
+Proceed to Checkout
+        |
+        v
+Place Order
+        |
+        v
+Verify Order Confirmation
+
+### 7.4 Sanity Testing
+
+Sanity testing will be performed after minor changes, enhancements, or defect fixes to verify that the specific functionality is working as expected.
+
+The purpose of sanity testing is to determine whether the application is stable enough for detailed regression testing.
+
+Sanity testing will focus on the changed functionality and its closely related areas.
+
+Examples:
+
+- Verify a fixed login issue.
+- Verify a modified search functionality.
+- Verify a cart quantity fix.
+- Verify a checkout validation fix.
+- Verify an order placement defect fix.
+
+Sanity Testing Flow:
+
+```text
+Change / Defect Fix
+        |
+        v
+Build Deployed
+        |
+        v
+Test Changed Functionality
+        |
+        v
+Test Related Functionality
+        |
+        v
+Pass / Fail
+        |
+        +---- Pass ----> Continue Regression Testing
+        |
+        +---- Fail ----> Report / Reopen Defect
+
 
