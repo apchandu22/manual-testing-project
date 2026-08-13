@@ -173,3 +173,46 @@ Add to Cart
 Checkout
         ↓
 Place Order
+
+## 6.3 Sanity Testing
+
+Sanity testing will be performed after specific changes or bug fixes to verify that the affected functionality works correctly.
+
+---
+
+## 6.4 Regression Testing
+
+Regression testing will be performed after application changes or defect fixes to ensure that existing functionality has not been negatively affected.
+
+Regression areas include:
+
+- Login
+- Product Search
+- Product Details
+- Cart
+- Checkout
+- Order Placement
+- Order History
+
+---
+
+## 6.5 Retesting
+
+Retesting will be performed after defects are fixed to verify that the reported defects have been successfully resolved.
+
+---
+
+## 6.6 Integration Testing
+
+Integration testing will validate interactions between major application modules.
+
+Examples:
+
+```text
+Login → Product Listing
+Product → Cart
+Cart → Checkout
+Checkout → Order
+Order → Order History
+
+
