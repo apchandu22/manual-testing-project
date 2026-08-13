@@ -293,7 +293,7 @@ Initial browser coverage:
 
 ---
 
-# 5. Out of Scope
+### 4.2 Out of Scope
 
 The following activities are outside the scope of this project:
 
@@ -322,7 +322,7 @@ Basic security-related functional checks are included, such as:
 
 ---
 
-# 6. Testing Strategy
+# 5. Testing Strategy
 
 The testing strategy will follow a structured manual testing approach.
 
@@ -358,7 +358,41 @@ Regression Testing
 Test Closure
 
 ---
+## 6. Test Environment
 
+### 6.1 Hardware Environment
+
+| Component | Details |
+|---|---|
+| Device | Desktop / Laptop |
+| Operating System | Windows |
+| Network | Stable Internet Connection |
+| Screen | Standard Desktop/Laptop Resolution |
+
+### 6.2 Software Environment
+
+| Component | Details |
+|---|---|
+| Browser 1 | Google Chrome |
+| Browser 2 | Microsoft Edge |
+| Testing Type | Manual Testing |
+| Defect Tracking | JIRA / GitHub Issues |
+| Documentation | Markdown |
+| Version Control | GitHub |
+
+### 6.3 Environment Requirements
+
+The test environment should:
+
+- Provide access to the application under test.
+- Support required test accounts.
+- Provide required test data.
+- Support supported browsers.
+- Allow defect reproduction.
+- Provide a stable network connection.
+- Allow application data to be reset where required.
+
+---
 # 7. Testing Types
 
 ## 7.1 Functional Testing
@@ -433,7 +467,7 @@ Place Order
         v
 Verify Order Confirmation
 ```
-## 7.3 Regression Testing
+### 7.3. Regression Testing
 
 Regression testing will be performed after application changes, enhancements, or defect fixes.
 
@@ -441,7 +475,7 @@ The objective is to verify that existing functionality has not been negatively i
 
 Regression testing will cover both the changed functionality and related business-critical areas.
 
-## 7.4 Sanity Testing
+## 7.4. Sanity Testing
 
 Sanity testing will be performed after minor changes, enhancements, or defect fixes to verify that the specific functionality is working as expected.
 
