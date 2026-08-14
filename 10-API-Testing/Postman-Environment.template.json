@@ -1,0 +1,12 @@
+{
+  "name": "Ecommerce-QA",
+  "values": [
+    {"key": "baseUrl", "value": "https://example.test", "enabled": true},
+    {"key": "username", "value": "qa_user@example.test", "enabled": true},
+    {"key": "password", "value": "REPLACE_ME", "enabled": true},
+    {"key": "authToken", "value": "", "enabled": true},
+    {"key": "productId", "value": "", "enabled": true},
+    {"key": "cartId", "value": "", "enabled": true},
+    {"key": "orderId", "value": "", "enabled": true}
+  ]
+}
